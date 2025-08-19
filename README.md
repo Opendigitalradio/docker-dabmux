@@ -41,15 +41,15 @@ docker buildx build --tag dabmux --output type=docker .
     TZ=<your_time_zone>
     ```
 
-1. Set your mux configuration file:
+1. Set the path to your [mux file](https://raw.githubusercontent.com/Opendigitalradio/ODR-DabMux/refs/heads/master/doc/example.mux):
 
     ```bash
-    MUX=<path_to_your_mux_configuration_file>
+    MUX=<path_to_your_mux_file>
     ```
 
 1. The image exposes the following ports:
-    - 9001 - 9016: incoming encoder streams
-    - 9201: output stream
+    - 9001 - 9016: input service streams
+    - 9201: output mux stream
     - 12720: multiplexer server management port
     - 12721: multiplexer ftp port
     - 12722: multiplexer ZMQ RC port
